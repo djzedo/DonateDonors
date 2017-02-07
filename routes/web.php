@@ -13,7 +13,7 @@
 
 Route::get('/', function(){
     $display = 'none';
-    $proyectos = DB::table('projects')->get();
+    //$proyectos = DB::table('projects')->get();
     return view('tuProyecto')->with('proyectos',$proyectos)->with('display',$display);
     
 });
