@@ -21,10 +21,9 @@ Route::get('/', function(){
 Route::post('Agregar', function(){
     $name = Input::get('nombre');
     
-    
     if(DB::table('projects')->whereNombre($name)->first() !== null){
         
-        return 'Poyecto a sido escogido';
+        return 'Poyecto ya existe';
         
     }else{
         DB::table('projects')->insert(['nombre'=>$name]);
