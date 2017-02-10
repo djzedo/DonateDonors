@@ -25,11 +25,14 @@ Route::post('Agregar', function(){
         
       return 'Poyecto ya existe';
         
-    }else{
-        DB::table('projects')->insert(['nombre'=>$name]);
+    }else{ 
+       if($name->has('nombre')) {
+            DB::table('projects')->insert(['nombre'=>$name]);
             return Redirect::to('/');
+    }else{
+        return 'Proyecto debe tener un nombre';
     }
-});
+}));
 
 Route::post('Donar',function(){
     $donacion = Input::get('Donacion');
