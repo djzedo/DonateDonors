@@ -33,7 +33,7 @@ Route::post('Agregar', function(){
         }
     }else{
         //return 'Proyecto debe tener un nombre';
-         return Redirect::to('/')->withDisplay('block');
+         return Redirect::to('/')->with($display,'block');
     }
 });
 
