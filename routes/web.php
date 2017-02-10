@@ -20,8 +20,7 @@ Route::get('/', function(){
 
 Route::post('Agregar', function(){
     $name = Input::get('nombre');
-    $display = 'block';
-    
+    $display;
     if($name) {
     
         if(DB::table('projects')->whereNombre($name)->first() !== null){
@@ -34,7 +33,7 @@ Route::post('Agregar', function(){
         }
     }else{
         //return 'Proyecto debe tener un nombre';
-         return Redirect::to('/')->with($display);
+         return Redirect::to('/')->withDisplay('block');
     }
 });
 
