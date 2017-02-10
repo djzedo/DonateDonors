@@ -32,7 +32,8 @@ Route::post('Agregar', function(){
             return Redirect::to('/');
         }
     }else{
-        return 'Proyecto debe tener un nombre';
+        //return 'Proyecto debe tener un nombre';
+         return Redirect::to('/')->withDisplay('block');
     }
 });
 
