@@ -21,18 +21,20 @@ Route::get('/', function(){
 Route::post('Agregar', function(){
     $name = Input::get('nombre');
     
-   if(DB::table('projects')->whereNombre($name)->first() !== null){
+    if($name->has('nombre')) {
+    
+        if(DB::table('projects')->whereNombre($name)->first() !== null){
         
-      return 'Poyecto ya existe';
+            return 'Poyecto ya existe';
         
-    }else{ 
-       if($name->has('nombre')) {
+        }else{ 
             DB::table('projects')->insert(['nombre'=>$name]);
             return Redirect::to('/');
+        }
     }else{
         return 'Proyecto debe tener un nombre';
     }
-}});
+});
 
 Route::post('Donar',function(){
     $donacion = Input::get('Donacion');
