@@ -32,7 +32,7 @@ Route::post('Agregar', function(){
     }else{
         return 'Proyecto debe tener un nombre';
     }
-}));
+}});
 
 Route::post('Donar',function(){
     $donacion = Input::get('Donacion');
