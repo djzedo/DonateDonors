@@ -21,14 +21,14 @@ Route::get('/', function(){
 Route::post('Agregar', function(){
     $name = Input::get('nombre');
     
-   // if(DB::table('projects')->whereNombre($name)->first() !== null){
+   if(DB::table('projects')->whereNombre($name)->first() !== null){
         
-     //   return 'Poyecto ya existe';
+      return 'Poyecto ya existe';
         
-    //}else{
+    }else{
         DB::table('projects')->insert(['nombre'=>$name]);
             return Redirect::to('/');
-    //}
+    }
 });
 
 Route::post('Donar',function(){
