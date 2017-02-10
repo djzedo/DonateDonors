@@ -21,7 +21,7 @@ Route::get('/', function(){
 Route::post('Agregar', function(){
     $name = Input::get('nombre');
     
-    if($name->has('nombre')) {
+    if($name) {
     
         if(DB::table('projects')->whereNombre($name)->first() !== null){
         
