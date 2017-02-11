@@ -22,7 +22,7 @@
         {!! HTML::image('img/tuProyecto.jpg' , 'Tu Proyecto', ['class' => 'imagenjumbo']) !!}
         
         <h1>Tu Proyecto Realidad</h1>
-        <canvas id=c></canvas>
+        
         
         {!! Form::open(['url' => 'Agregar']) !!}
             
