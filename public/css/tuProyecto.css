@@ -30,7 +30,7 @@ tr:nth-child(even) {
 .imagenjumbo{
     margin: 0 auto;
     width: 100%;
-    height: 120px;
+    height: 220px;
     z-index: -1;
 }
 
