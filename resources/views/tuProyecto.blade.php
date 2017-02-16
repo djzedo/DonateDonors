@@ -21,7 +21,7 @@
     <body>
         {!! HTML::image('img/tuProyecto.jpg' , 'Tu Proyecto', ['class' => 'imagenjumbo']) !!}
         
-        <h1>Tu Proyecto Realidad</h1>
+        <h1>DonateDreams</h1>
         
         
         {!! Form::open(['url' => 'Agregar']) !!}
