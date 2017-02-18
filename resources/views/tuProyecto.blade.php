@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Tu Proyecto Realidad</title>
+        <title>DonateDreams</title>
     
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
