@@ -32,6 +32,12 @@
     </li>
 </ul>
 
+<h2>Tecnologías Usadas</h2>
+
+<p>Se usa como lenguaje de programación PHP.</p>
+<p>Framework: Laravel</p>
+<p>Persistencia: RDB MySQL</p>
+<p>HTTP Server: Apache</p>
 
 
 
