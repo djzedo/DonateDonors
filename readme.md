@@ -1,40 +1,38 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<h1>DonateDreams</h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+<p>Se trata de una plataforma, donde diferentes usuarios montan las ideas de proyecto, para darla a conocer al mundo y los usuarios interesados en el proyecto, pueden donar dinero al proyecto. La plataforma consta de 2 usuarios, el dreamer y el doner. El dreamer sube su idea y el doner dona al proyecto que ha de gustarle.</p>
 
-## About Laravel
+<ul>
+    <li>
+        Los Dreamers registran su idea, la describe, la documenta (fotos, videos, audios, links, etc.) lo mejor posible para llamar la atención de los diferentes donantes.
+    </li>
+    
+    <li>
+        Los Dreamers, para poder montar sus ideas, deben de hacerlo con una Universidad, para mostrar seriedad y compromiso.
+    </li>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+    <li>
+        Los Dreamers al montar un proyecto, debe escoger su ciencia para categorizar, seguido de un área. Un ejemplo: Un es Ingeniería Civil como Ciencia e Innovación como área.     
+    </li>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    <li>
+        Los Dreamers podrán visualizar cuánto han donado al proyecto y quienes han donado.
+    </li>
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+    <li>
+        Los Doners visualizan los diferentes proyectos de los Dreamers, miran la descripción, se nutren de la documentación que tiene, y finalmente, podrá donar alguna cantidad de dinero.
+    </li>
+    
+    <li>
+        Los Doners cuando donan, se harán socios de proyecto, según los términos descritos en cada proyecto. 
+    </li>
 
-## Learning Laravel
+    <li>
+        Los Proyectos tiene fases de inicio y terminación. También pueden terminar por completitud de la donación que necesiten. 
+    </li>
+</ul>
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
