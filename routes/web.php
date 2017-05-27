@@ -37,6 +37,12 @@ Route::post('Agregar', function(){
     }
 });
 
+Route::get('/transExitosa', function(){
+    
+    return 'transaccion exitosa';
+    
+});
+
 Route::post('Donar',function(){
     $donacion = Input::get('Donacion');
     $id = Input::get('id');
@@ -46,13 +52,9 @@ Route::post('Donar',function(){
         return Redirect::to('/');
 });
 
-Route::get('/transExitosa', function(){
-    
-    return 'transaccion exitosa';
-    
-});
 
 Route::get('paywithpaypal', array('as' => 'addmoney.paywithpaypal','uses' => 'AddMoneyController@payWithPaypal',));
+
 Route::post('paypal', array('as' => 'addmoney.paypal','uses' => 'AddMoneyController@postPaymentWithpaypal',));
 Route::get('paypal', array('as' => 'payment.status','uses' => 'AddMoneyController@getPaymentStatus',));
 

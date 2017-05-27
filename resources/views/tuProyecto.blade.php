@@ -41,9 +41,9 @@
              <tr>
                 <td> {!! $proyecto->nombre !!} </td> 
                 <td> ($ {!! $proyecto->cantidad !!}) </td> 
-                <td> {!! Form::open(['url'=>'Donar']) !!} 
+                <td> {!! Form::open(['url'=>'paywithpaypal', 'method'=>'get']) !!} 
                         {!! Form::hidden('id', $proyecto->id) !!}
-                        {!! Form::selectRange('Donacion',1,20) !!}
+                        <!-- {!! Form::selectRange('Donacion',1,20) !!} -->
                         {!! Form::submit('Donar!') !!}
                      {!! Form::close() !!}
                  </td>
