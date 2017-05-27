@@ -45,3 +45,9 @@ Route::post('Donar',function(){
     DB::table('projects')->where('id',$id)->increment('cantidad', $donacion);
         return Redirect::to('/');
 });
+
+Route::get('/transExitosa', function(){
+    
+    return 'transaccion exitosa';
+    
+});
