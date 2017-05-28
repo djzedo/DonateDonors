@@ -5,17 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Pagos</title>
         
         <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
         
         <!-- Styles -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        
-        {!! Html::style('css/tuProyecto.css') !!}
-        
-        <style>
-            
+                
+        <style>         
             
         </style>
     </head>
@@ -39,7 +36,7 @@
                         </div>
                         <?php Session::forget('error');?>
                         @endif
-                        <div class="panel-heading">Pagar con Paypal a: {!! $nombrePro !!} </div>
+                        <div class="panel-heading">Pagar con Paypal a: {{ $nombrePro }} </div>
                         <div class="panel-body">
                             <form class="form-horizontal" method="POST" id="payment-form" role="form" action="{!! URL::route('addmoney.paypal') !!}" >
                                 {{ csrf_field() }}

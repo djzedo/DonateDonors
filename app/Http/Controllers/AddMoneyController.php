@@ -47,7 +47,6 @@ class AddMoneyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function payWithPaypal()
     {
         $nomPro = \DB::table('projects')->select('nombre')->whereid('id')->get();
         return view('paywithpaypal')->with('nombrePro',$nomPro);

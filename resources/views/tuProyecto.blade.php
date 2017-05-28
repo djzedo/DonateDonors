@@ -42,7 +42,7 @@
                 <td> {!! $proyecto->nombre !!} </td> 
                 <td> ($ {!! $proyecto->cantidad !!}) </td> 
                 <td> {!! Form::open(['url'=>'paywithpaypal', 'method'=>'get']) !!} 
-                        {!! Form::hidden('id', $proyecto->id) !!}
+                     {!! Form::hidden('id', $proyecto->id) !!}
                         <!-- {!! Form::selectRange('Donacion',1,20) !!} -->
                         {!! Form::submit('Donar!') !!}
                      {!! Form::close() !!}
