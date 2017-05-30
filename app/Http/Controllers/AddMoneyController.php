@@ -47,11 +47,17 @@ class AddMoneyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function payWithPaypal(Request $request)
     {   
         $id = $request->get('id');
         $nomPro = \DB::table('projects')->where('id',$id)->value('nombre');
         return view('paywithpaypal')->with('nombrePro',$nomPro)->with('id',$id);
+=======
+    {
+        $nomPro = \DB::table('projects')->select('nombre')->whereid('id')->get();
+        return view('paywithpaypal')->with('nombrePro',$nomPro);
+>>>>>>> edbb5ae0a72de3d15a9cdcbf4a8a2878ede55bd5
     }
     /**
      * Store a details of payment with paypal.

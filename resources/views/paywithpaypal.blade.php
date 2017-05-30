@@ -5,14 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<<<<<<< HEAD
         <title>Donar</title>
+=======
+        <title>Pagos</title>
+>>>>>>> edbb5ae0a72de3d15a9cdcbf4a8a2878ede55bd5
         
         <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
         
         <!-- Styles -->
+<<<<<<< HEAD
         
         <style>
             
+=======
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+                
+        <style>         
+>>>>>>> edbb5ae0a72de3d15a9cdcbf4a8a2878ede55bd5
             
         </style>
     </head>
@@ -36,9 +46,13 @@
                         </div>
                         <?php Session::forget('error');?>
                         @endif
+<<<<<<< HEAD
                         
                         <div class="panel-heading">Donar con Paypal a: {!!$nombrePro!!}  <?php if (isset($id)) { $idProyecto = $_GET['id'];} ?>
                         </div>
+=======
+                        <div class="panel-heading">Pagar con Paypal a: {{ $nombrePro }} </div>
+>>>>>>> edbb5ae0a72de3d15a9cdcbf4a8a2878ede55bd5
                         <div class="panel-body">
                             <form class="form-horizontal" method="POST" id="payment-form" role="form" action="{!! URL::route('addmoney.paypal') !!}" >
                                 {{ csrf_field() }}
