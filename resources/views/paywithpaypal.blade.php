@@ -5,14 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Donar</title>
         
         <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
         
         <!-- Styles -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        
-        {!! Html::style('css/tuProyecto.css') !!}
         
         <style>
             
@@ -27,7 +24,7 @@
                     <div class="panel panel-default">
                         @if ($message = Session::get('success'))
                         <div class="custom-alerts alert alert-success fade in">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 
                             {!! $message !!}
                         </div>
                         <?php Session::forget('success');?>
@@ -39,7 +36,9 @@
                         </div>
                         <?php Session::forget('error');?>
                         @endif
-                        <div class="panel-heading">Pagar con Paypal a: {!! $nombrePro !!} </div>
+                        
+                        <div class="panel-heading">Donar con Paypal a: {!!$nombrePro!!}  <?php if (isset($id)) { $idProyecto = $_GET['id'];} ?>
+                        </div>
                         <div class="panel-body">
                             <form class="form-horizontal" method="POST" id="payment-form" role="form" action="{!! URL::route('addmoney.paypal') !!}" >
                                 {{ csrf_field() }}
@@ -47,6 +46,11 @@
                                     <label for="amount" class="col-md-4 control-label">Cantidad</label>
                                     <div class="col-md-6">
                                         <input id="amount" type="text" class="form-control" name="amount" value="{{ old('amount') }}" autofocus>
+                                        <?php
+                                        if (isset($idProyecto)){
+                                        ?>{!! Form::hidden('idPro', $idProyecto) !!}
+                                        <?php }
+                                        ?>
                                         @if ($errors->has('amount'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('amount') }}</strong>
@@ -68,6 +72,5 @@
                 </div>
             </div>
         </div>
-    
     </body>
 </html>

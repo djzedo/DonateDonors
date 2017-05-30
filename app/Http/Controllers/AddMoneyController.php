@@ -47,10 +47,11 @@ class AddMoneyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function payWithPaypal()
-    {
-        $nomPro = \DB::table('projects')->select('nombre')->whereid('id')->get();
-        return view('paywithpaypal')->with('nombrePro',$nomPro);
+    public function payWithPaypal(Request $request)
+    {   
+        $id = $request->get('id');
+        $nomPro = \DB::table('projects')->where('id',$id)->value('nombre');
+        return view('paywithpaypal')->with('nombrePro',$nomPro)->with('id',$id);
     }
     /**
      * Store a details of payment with paypal.
@@ -63,8 +64,9 @@ class AddMoneyController extends Controller
         $payer = new Payer();
         $payer->setPaymentMethod('paypal');
         
+        $idPro = $request->get('idPro');
         $item_1 = new Item();
-        $item_1->setName('Item 1') /** item name **/
+        $item_1->setName($idPro) /** item name **/
             ->setCurrency('USD')
             ->setQuantity(1)
             ->setPrice($request->get('amount')); /** unit price **/
@@ -141,11 +143,15 @@ class AddMoneyController extends Controller
         $execution->setPayerId(Input::get('PayerID'));
         /**Execute the payment **/
         $result = $payment->execute($execution, $this->_api_context);
-        /** dd($result);exit; /** DEBUG RESULT, remove it later **/
+        //dd($result);exit; /** DEBUG RESULT, remove it later **/
         if ($result->getState() == 'approved') { 
             
+            $donacion = $payment->getTransactions()[0]->getAmount()->getTotal();
+            $idProyecto = $payment->getTransactions()[0]->getItemList()->getItems()[0]->getName();
             /** it's all right **/
             /** Here Write your database logic like that insert record or value in database if you want **/
+            \DB::table('projects')->where('id',$idProyecto)->increment('cantidad', $donacion);
+        
             \Session::put('success','Payment success');
             return Redirect::route('addmoney.paywithpaypal');
         }

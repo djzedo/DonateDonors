@@ -37,24 +37,20 @@ Route::post('Agregar', function(){
     }
 });
 
-Route::get('/transExitosa', function(){
-    
-    return 'transaccion exitosa';
-    
-});
-
+/* Donar sin PayPal
 Route::post('Donar',function(){
     $donacion = Input::get('Donacion');
     $id = Input::get('id');
     
-    
     DB::table('projects')->where('id',$id)->increment('cantidad', $donacion);
         return Redirect::to('/');
 });
-
+fin Donar Sin PayPal
+*/
 
 Route::get('paywithpaypal', array('as' => 'addmoney.paywithpaypal','uses' => 'AddMoneyController@payWithPaypal',));
 
 Route::post('paypal', array('as' => 'addmoney.paypal','uses' => 'AddMoneyController@postPaymentWithpaypal',));
+
 Route::get('paypal', array('as' => 'payment.status','uses' => 'AddMoneyController@getPaymentStatus',));
 
